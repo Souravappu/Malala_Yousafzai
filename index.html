@@ -11,8 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <style>
-        /* Existing styles remain unchanged */
-        /* Reset and Base Styles */
+     
         * {
             margin: 0;
             padding: 0;
@@ -28,7 +27,7 @@
             cursor: none;
         }
 
-        /* Custom Cursor */
+       
         .custom-cursor {
             position: fixed;
             width: 20px;
@@ -46,12 +45,11 @@
             background: rgba(219, 39, 119, 0.3);
         }
 
-        /* Enhanced Typography */
         h1, h2, h3, h4, h5 {
             font-family: 'Playfair Display', serif;
         }
 
-        /* Advanced Navigation */
+        
         nav {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(15px);
@@ -97,7 +95,7 @@
             color: #db2777;
         }
 
-        /* Hero Section with Parallax */
+        
         .hero-section {
             background: linear-gradient(135deg, #f472b6 0%, #db2777 50%, #9d174d 100%);
             min-height: 100vh;
@@ -156,7 +154,7 @@
             box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), 0 0 0 12px rgba(219, 39, 119, 0.5);
         }
 
-        /* Particle Background */
+        
         #particles {
             position: absolute;
             top: 0;
@@ -166,7 +164,6 @@
             z-index: 0;
         }
 
-        /* Section Styles */
         section {
             padding: 10rem 0;
             position: relative;
@@ -196,7 +193,7 @@
             box-shadow: 0 0 15px rgba(219, 39, 119, 0.5);
         }
 
-        /* Enhanced Card Styles */
+        
         .card {
             background: white;
             border-radius: 1.5rem;
@@ -231,7 +228,7 @@
             box-shadow: 0 30px 60px rgba(219, 39, 119, 0.25);
         }
 
-        /* Timeline Container */
+        
         .timeline-container {
             position: relative;
             max-width: 900px;
@@ -240,7 +237,6 @@
             overflow: visible;
         }
 
-        /* Timeline Line */
         .timeline-line {
             width: 4px;
             height: 100%;
@@ -253,7 +249,6 @@
             z-index: 0;
         }
 
-        /* Timeline Item */
         .timeline-item {
             position: relative;
             display: flex;
@@ -261,7 +256,6 @@
             justify-content: center;
         }
 
-        /* Timeline Dot */
         .timeline-dot {
             position: absolute;
             width: 16px;
@@ -277,7 +271,6 @@
             z-index: 1;
         }
 
-        /* Timeline Image */
         .timeline-image img {
             width: 192px;
             height: 128px;
@@ -293,7 +286,6 @@
             box-shadow: 0 12px 30px rgba(219, 39, 119, 0.3);
         }
 
-        /* Timeline Content */
         .timeline-content {
             max-width: 400px;
             background: white;
@@ -309,7 +301,6 @@
             box-shadow: 0 15px 35px rgba(219, 39, 119, 0.15);
         }
 
-        /* Responsive Adjustments */
         @media (min-width: 768px) {
             .timeline-image img {
                 width: 256px;
@@ -335,14 +326,12 @@
             }
         }
 
-        /* Animation for Dots */
         @keyframes pulseDot {
             0% { transform: translate(-50%, -50%) scale(1); }
             50% { transform: translate(-50%, -50%) scale(1.3); }
             100% { transform: translate(-50%, -50%) scale(1); }
         }
-
-        /* Enhanced Buttons */
+/
         .btn {
             position: relative;
             overflow: hidden;
@@ -376,7 +365,6 @@
             height: 400px;
         }
 
-        /* Advanced Pioneers Section */
         .pioneers-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -424,7 +412,6 @@
             opacity: 1;
         }
 
-        /* Advanced Animations */
         @keyframes float {
             0%, 100% { transform: translateY(0) rotate(0deg); }
             50% { transform: translateY(-40px) rotate(3deg); }
@@ -441,7 +428,6 @@
             100% { transform: rotate(360deg); }
         }
 
-        /* Enhanced About Section */
         .about-card {
             position: relative;
             padding: 3rem;
@@ -484,7 +470,6 @@
             transform: rotate(360deg) scale(1.15);
         }
 
-        /* Enhanced Footer */
         footer {
             background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
             color: #e2e8f0;
@@ -525,7 +510,6 @@
             transform: translateY(-8px) rotate(15deg);
         }
 
-        /* Decorative Elements */
         .decorative-circle {
             position: absolute;
             width: 400px;
@@ -542,10 +526,9 @@
     </style>
 </head>
 <body>
-    <!-- Custom Cursor -->
+
     <div class="custom-cursor"></div>
 
-    <!-- Decorative Elements -->
     <div class="decorative-circle" style="top: 10%; left: -200px;"></div>
     <div class="decorative-circle" style="bottom: 5%; right: -200px;"></div>
 
@@ -882,7 +865,7 @@
 
     <!-- JavaScript -->
     <script>
-        // Custom Cursor
+        
         const cursor = document.querySelector('.custom-cursor');
         document.addEventListener('mousemove', (e) => {
             cursor.style.left = `${e.clientX}px`;
@@ -894,27 +877,26 @@
             el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
         });
 
-        // Mobile Menu Toggle
         document.getElementById('menu-toggle').addEventListener('click', () => {
             document.getElementById('mobile-menu').classList.toggle('hidden');
         });
 
-        // Sticky Navbar
+      
         window.addEventListener('scroll', () => {
             const navbar = document.getElementById('navbar');
             navbar.classList.toggle('sticky', window.scrollY > 50);
         });
 
-        // GSAP Animations
+        
         gsap.registerPlugin(ScrollTrigger);
 
-        // Hero Section
+       
         gsap.from(".hero-title", { duration: 1.5, x: -100, opacity: 0, ease: "power4.out", delay: 0.5 });
         gsap.from(".hero-section p", { duration: 1.5, y: 50, opacity: 0, ease: "power4.out", delay: 0.8, stagger: 0.2 });
         gsap.from(".hero-section .btn", { duration: 1.5, scale: 0.8, opacity: 0, stagger: 0.2, ease: "back.out(1.7)", delay: 1 });
         gsap.from(".hero-img", { duration: 2, scale: 0.5, opacity: 0, ease: "elastic.out(1, 0.5)", delay: 1.2 });
 
-        // About Section
+        
         gsap.utils.toArray('.about-card').forEach((card, i) => {
             gsap.from(card, {
                 scrollTrigger: { trigger: card, start: 'top 85%' },
@@ -926,7 +908,7 @@
             });
         });
 
-        // Timeline Animation
+        
         gsap.utils.toArray('.timeline-item').forEach((item, i) => {
             gsap.fromTo(item.querySelector('.timeline-content'), 
                 { y: 100, opacity: 0 },
@@ -952,7 +934,7 @@
             );
         });
 
-        // Achievements Animation
+        
         gsap.utils.toArray('.pioneer-card').forEach((card, i) => {
             gsap.from(card, {
                 scrollTrigger: { trigger: card, start: 'top 90%' },
@@ -964,7 +946,6 @@
             });
         });
 
-        // Particle Background (Three.js)
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
         const renderer = new THREE.WebGLRenderer({ alpha: true });
